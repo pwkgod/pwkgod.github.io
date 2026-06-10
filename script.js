@@ -1,5 +1,5 @@
 // ================================
-// TERMINAL TYPING EFFECT
+// EFEITO DE ESCRITA NO TERMINAL
 // ================================
 
 const typingElement = document.querySelector(".shell-command");
@@ -45,7 +45,7 @@ function typeEffect() {
 typeEffect();
 
 // ================================
-// TERMINAL BODY WRITING EFFECT
+// EFEITO DE ESCRITA NO TERMINAL
 // ================================
 
 const terminalLines = [
@@ -92,7 +92,7 @@ async function typeTerminalLines() {
         terminalBody.innerHTML = "";
 
         // =========================
-        // TYPE SKILLS
+        // EFEITO DIGITAR SKILLS
         // =========================
 
         for (const line of terminalLines) {
@@ -116,13 +116,13 @@ async function typeTerminalLines() {
         }
 
         // =========================
-        // WAIT BEFORE CLEAR
+        // ESPERAR PARA LIMPAR
         // =========================
 
         await sleep(3000);
 
         // =========================
-        // TYPE CLEAR COMMAND
+        // EFEITO DIGITANDO COMANDO CLEAR
         // =========================
 
         const clearLine = document.createElement("p");
@@ -143,13 +143,13 @@ async function typeTerminalLines() {
         }
 
         // =========================
-        // WAIT AFTER CLEAR COMMAND
+        // ESPERAR PARA LIMPAR
         // =========================
 
         await sleep(800);
 
         // =========================
-        // CLEAR TERMINAL
+        // EFEITO LIMPAR TERMINAL
         // =========================
 
         terminalBody.style.opacity = "0";
@@ -161,7 +161,7 @@ async function typeTerminalLines() {
         terminalBody.style.opacity = "1";
 
         // =========================
-        // WAIT BEFORE RESTART
+        // TEMPO PARA REINICIAR
         // =========================
 
         await sleep(1000);
@@ -171,7 +171,7 @@ async function typeTerminalLines() {
 typeTerminalLines();
 
 // ================================
-// FADE-IN ON SCROLL
+// FADE-IN AO DAR SCROLL
 // ================================
 
 const hiddenElements = document.querySelectorAll(
@@ -200,7 +200,7 @@ hiddenElements.forEach((el) => {
 });
 
 // ================================
-// GLITCH EFFECT
+// EFEITO GLITCH
 // ================================
 
 const heroTitle = document.querySelector(".hero h2");
@@ -216,21 +216,7 @@ setInterval(() => {
 }, 5000);
 
 // ================================
-// PARALLAX GRID
-// ================================
-
-window.addEventListener("scroll", () => {
-
-    const grid = document.querySelector(".background-grid");
-
-    let offset = window.scrollY * 0.15;
-
-    grid.style.transform = `translateY(${offset}px)`;
-
-});
-
-// ================================
-// ACTIVE NAV LINK
+// NAV LINK
 // ================================
 
 const sections = document.querySelectorAll("section");
@@ -263,7 +249,7 @@ window.addEventListener("scroll", () => {
 });
 
 // ================================
-// SCANLINE EFFECT
+// EFEITO DE LINHA DE SCAN
 // ================================
 
 const scanline = document.createElement("div");
@@ -271,3 +257,10 @@ const scanline = document.createElement("div");
 scanline.classList.add("scanline");
 
 document.body.appendChild(scanline);
+
+// ================================
+// MUDAR ANO DO RODAPÉ
+// ================================
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
